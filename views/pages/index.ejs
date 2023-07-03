@@ -1,72 +1,111 @@
 <!DOCTYPE html>
 <html lang="nl">
-    <head>
-        <%- include("../partials/head");%>
-        <title>OBA Catalogus</title>
-    </head>
 
-    <body>
-        <%- include("../partials/nav");%>
-        <h1 class="oba-title">OBA Catalogus</h1>
-        <!-- post method, to send the query to the api > get, part of url as queryparam > post, part of body (don't see it in url) -->
+<head>
+    <%- include("../partials/head");%>
+    <title>OBA Catalogus</title>
+</head>
 
-        <!-- animation image -->
-        <div class="introduction">
-            <img
-                src="/images/character/animation/frame1.png"
-                alt="circle for animation"
-                class="introduction_image"
-            />
+<body>
+    <%- include("../partials/nav");%>
+    <h1 class="oba-title">OBA Catalogus</h1>
+    <!-- post method, to send the query to the api > get, part of url as queryparam > post, part of body (don't see it in url) -->
+
+    <!-- animation image -->
+    <div class="introduction">
+        <img src="/images/character/animation/frame1.png" alt="circle for animation" class="introduction_image" />
+    </div>
+
+    <div class="chat-icon">
+        <div id="paragraph-container"></div>
+        <div class="stick"></div>
+    </div>
+
+    <!-- results, check renderResult for elements -->
+    <div id="parent_results" class="hidden" >
+        <div id="results" class="scroll-snap-item">
+            <!-- <h2>Hello</h2> -->
         </div>
+    </div>
 
-        <div class="chat-icon">
-            <div id="paragraph-container"></div>
-            <div class="stick"></div>
-        </div>
+    <div class="arrow-container">
+        <div class="double-arrow"></div>
+    </div>
 
-        <!-- results, check renderResult for elements -->
-        <div id="parent_results" class="hidden">
-            <div id="results">
-                <!-- <h2>Hello</h2> -->
+
+    <div class="faq-wrapper">
+
+        <ul class="faq-list">
+            <div class="heading-faq">
+                <h4>Veelgestelde vragen </h4>
+                 <button id="cancelBtn">X</button>
             </div>
+            <li>
+                <details>
+                    <summary>Waar vind ik mijn lenersnummer?</summary>
+                    <p>Het lenersnummer staat op je bibliotheekpas en begint met de cijfers 22000...</p>
+                </details>
+            </li>
+
+            <li>
+                <details>
+                    <summary>Hoe wijzig ik mijn gegevens?</summary>
+                    <p>Een adreswijziging kan eenvoudig doorgegeven worden via een e-mail aan klantenservice@oba.nl. Om
+                        de
+                        gegevens aan te kunnen passen is het van belang om, naast het nieuwe adres, ook naam en
+                        pasnummer
+                        (22......) te vermelden. Het pasnummer is te vinden op de OBA-pas.</p>
+                </details>
+            </li>
+
+            <li>
+                <details>
+                    <summary>Hoe vraag ik een nieuwe pas aan?</summary>
+                    <p>Neem contact op met de klantenservice. Je pas wordt dan geblokkeerd. Vraag een duplicaatpas aan
+                        via
+                        het
+                        online formulier, je ontvangt je pas dan binnen een week.</p>
+                </details>
+
+            </li>
+
+
+            <li>
+                <details>
+                    <summary>Hoe lang kan ik boeken of andere materialen lenen?</summary>
+                    <p>Met je OBA-pas kan je per keer 10 boeken lenen voor 3 weken. Verlengen kan via Mijn Bibliotheek
+                        of de
+                        OBA
+                        App. </p>
+                </details>
+            </li>
+
+            <li>
+                <details>
+                    <summary>Waarom betaal ik inschrijfkosten voor mijn lidmaatschap?</summary>
+                    <p>Voor je nieuwe lidmaatschap betaal je eenmalig €3,50* aan inschrijfkosten. Met deze bijdrage
+                        dekken
+                        we de
+                        kosten voor het aanmaken van een fysieke OBA-pas. </p>
+                </details>
+
+            </li>
+
+        </ul>
+
+    </div>
+
+    <!-- chat bar -->
+    <div class="chat">
+        <!-- frequently asked questions -->
+
+        <div class="chat_bar">
+            <input type="text" name="query" placeholder="Wat zoek je in de bieb?" id="query" class="chat_bar_input" />
+            <button type="submit" id="searchButton" class="chat_bar_button">
+                Zoek
+            </button>
         </div>
+    </div>
+</body>
 
-        <div class="arrow-container">
-            <div class="double-arrow"></div>
-        </div>
-
-        <div class="faq-wrapper hidden">
-            <div class="chat_faq">
-                <div>
-                    <h4>Meeste gestelde vragen</h4>
-                    <button id="close-button"><span>x</span></button>
-                </div>
-
-                <ul>
-                    <li><a href="#">Ik zoek een boek over koken</a></li>
-                    <li><a href="#">Ik zoek een boek over Harry Potter</a></li>
-                    <li><a href="#">Ik zoek een cursus over Spaans</a></li>
-                    <li><a href="#">Ik zoek een kinderboek</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- chat bar -->
-        <div class="chat">
-            <!-- frequently asked questions -->
-
-            <div class="chat_bar">
-                <input
-                    type="text"
-                    name="query"
-                    placeholder="Wat zoek je in de bieb?"
-                    id="query"
-                    class="chat_bar_input"
-                />
-                <button type="submit" id="searchButton" class="chat_bar_button">
-                    Zoek
-                </button>
-            </div>
-        </div>
-    </body>
 </html>

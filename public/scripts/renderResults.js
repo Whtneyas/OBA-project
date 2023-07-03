@@ -1,4 +1,7 @@
 export function renderResults(results) {
+
+
+   
     // show parent_results when searching for books and stuffs
     document.getElementById('parent_results').classList.remove('hidden');
     const resultsDiv = document.getElementById('results');
@@ -22,6 +25,8 @@ export function renderResults(results) {
             resultsGroupedByFormat[format].push(searchResult);
         } else {
             resultsGroupedByFormat[format] = [searchResult];
+
+            
         }
     }
 
@@ -30,12 +35,12 @@ export function renderResults(results) {
 
         const heading = document.createElement('h2');
         heading.textContent = format;
-        heading.classList.add('format-heading'); // TODO
+        heading.classList.add('format-heading', format.toLowerCase()); // TODO
 
         resultsDiv.append(heading);
 
         const resultContainer = document.createElement('div');
-        resultContainer.classList.add('results-container'); // TODO
+        resultContainer.classList.add('results-container', format.toLowerCase()); // TODO
 
         for (let searchResult of resultsByFormat) {
             // creating js elements
@@ -48,6 +53,9 @@ export function renderResults(results) {
             const authorParagraph = document.createElement('p'); // Separate paragraph for author
             const detailDiv = document.createElement('div');
 
+           
+     
+
             const bookTitle = shortenTitle(searchResult.titles[0]);
             const authors = shortenAuthor(searchResult.authors);
 
@@ -59,6 +67,7 @@ export function renderResults(results) {
             container.appendChild(div);
             div.appendChild(imageContainer);
             imageContainer.appendChild(image);
+            
             div.appendChild(bookInfoDiv);
             bookInfoDiv.appendChild(titleHeading);
             bookInfoDiv.appendChild(authorParagraph);
@@ -67,6 +76,8 @@ export function renderResults(results) {
             detailDiv.appendChild(authorParagraph);
             resultContainer.appendChild(container);
             // div.appendChild(formatsParagraph);
+            resultContainer.appendChild(container);
+            
 
             // textcontents
             titleHeading.textContent = bookTitle;
@@ -75,14 +86,17 @@ export function renderResults(results) {
             // adding classes
             div.classList.add('book-container');
             imageContainer.classList.add('image-container');
+            
             detailDiv.classList.add('detail-div');
             imageContainer.classList.add('image-container');
             detailDiv.classList.add('detail-div');
+            container.classList.add(format.toLowerCase());
         }
 
         resultsDiv.append(resultContainer);
     }
 }
+
 
 // Function to shorten the title
 function shortenTitle(title) {

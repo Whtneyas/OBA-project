@@ -1,51 +1,78 @@
 .favorite-heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding-bottom: 10px;
 }
 
 .favorite-parent {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .favorites {
   position: absolute;
   top: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   max-width: 48em;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0 20px 0 20px;
   padding-bottom: 200px;
 }
+
 .favorites .format-heading {
   margin: 10px 0 10px 0;
 }
+
 .favorites h2 {
   padding-top: 20px;
 }
+
 .favorites .results-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 0 20px;
 }
+
 .favorites .results-container a {
   text-decoration: none;
 }
+
 .favorites .results-container a img {
   width: 130px;
-  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  -webkit-box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+          box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
+
 .favorites .results-container a .detail-div {
   margin-bottom: 20px;
 }
+
 .favorites .results-container a .detail-div h3 {
   color: #3c389e;
   word-wrap: break-word;
   width: 128px;
   font-size: 0.9em;
 }
+
 .favorites .results-container a .detail-div p {
   color: grey;
   word-wrap: break-word;
@@ -57,4 +84,5 @@
   .favorites {
     top: 130px;
   }
-}/*# sourceMappingURL=favorites.css.map */
+}
+/*# sourceMappingURL=favorites.css.map */

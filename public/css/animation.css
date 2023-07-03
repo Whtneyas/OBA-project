@@ -1,14 +1,42 @@
-@keyframes arrowAnimation {
+@-webkit-keyframes arrowAnimation {
   0% {
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
   50% {
-    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
   }
   100% {
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
+
+@keyframes arrowAnimation {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes fadeOutAnimation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 @keyframes fadeOutAnimation {
   0% {
     opacity: 1;
@@ -17,19 +45,28 @@
     opacity: 0;
   }
 }
+
 .arrow-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
   top: 12em;
   opacity: 0;
 }
+
 .arrow-container .double-arrow {
   width: 0;
   height: 0;
   position: relative;
 }
+
 .arrow-container .double-arrow::before, .arrow-container .double-arrow::after {
   content: "";
   width: 0;
@@ -39,19 +76,26 @@
   border-top: 20px solid #3C389E;
   position: absolute;
   left: 0;
-  animation: arrowAnimation 2s infinite;
+  -webkit-animation: arrowAnimation 2s infinite;
+          animation: arrowAnimation 2s infinite;
 }
+
 .arrow-container .double-arrow::before {
-  opacity: 0.3;
+  opacity: .3;
 }
+
 .arrow-container .double-arrow::after {
   top: 20px;
-  animation-delay: 0.5s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
   /* Delay the animation for the second arrow */
 }
+
 .arrow-container .double-arrow.fade-out {
-  animation: fadeOutAnimation 1s forwards;
-  animation-delay: 2s;
+  -webkit-animation: fadeOutAnimation 1s forwards;
+          animation: fadeOutAnimation 1s forwards;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
   /* Delay the fade-out animation */
 }
 
@@ -74,17 +118,14 @@
     border-top: 20px solid #3C389E;
     position: absolute;
     left: 0;
-
     -webkit-animation: arrowAnimation 2s infinite;
     animation: arrowAnimation 2s infinite;
   }
   #detail-arrow-container #arrows::before {
     opacity: .3;
-
   }
   #detail-arrow-container #arrows::after {
     top: 20px;
-
     -webkit-animation-delay: 0.5s;
     animation-delay: 0.5s;
   }
@@ -192,6 +233,6 @@
             animation-delay: 10s;
     -webkit-animation-fill-mode: forwards;
             animation-fill-mode: forwards;
-
   }
-}/*# sourceMappingURL=animation.css.map */
+}
+/*# sourceMappingURL=animation.css.map */

@@ -1,53 +1,85 @@
 #parent_results {
   z-index: -999;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 270px;
 }
+
 #parent_results #results {
-  position: absolute;
-  top: 90px;
   background-color: var(--background);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  max-width: 48em;
-  justify-content: center;
-  margin: 0 20px 0 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding-bottom: 200px;
 }
+
 #parent_results #results .format-heading {
   margin-bottom: 10px;
+  font-size: 1.2rem;
+  margin-left: 2em;
 }
+
 #parent_results #results .results-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  gap: 0 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
+#parent_results #results .results-container .prentenboek {
+  background-color: green;
+}
+
 #parent_results #results .results-container a {
   text-decoration: none;
 }
+
 #parent_results #results .results-container a img {
-  width: 130px;
-  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  width: 100px;
+  height: 140px;
+  -webkit-box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+          box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
+
 #parent_results #results .results-container a .detail-div {
   margin-bottom: 20px;
 }
+
 #parent_results #results .results-container a .detail-div h3 {
   color: #3c389e;
   word-wrap: break-word;
   width: 128px;
-  font-size: 0.9em;
+  font-size: 0.8em;
 }
+
 #parent_results #results .results-container a .detail-div p {
   color: grey;
   word-wrap: break-word;
   width: 128px;
-  font-size: 0.9em;
+  font-size: 0.7em;
 }
 
 @media (min-width: 44em) {
   #parent_container #results {
     top: 130px;
   }
-}/*# sourceMappingURL=results.css.map */
+}
+/*# sourceMappingURL=results.css.map */

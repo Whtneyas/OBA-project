@@ -1,148 +1,123 @@
 <!DOCTYPE html>
 <html lang="nl">
-    <head>
-        <%- include("../partials/head");%>
-        <title>OBA Catalogus</title>
-    </head>
 
-    <body>
-        <%- include("../partials/nav");%>
-        <h1 class="oba-title">OBA Catalogus</h1>
-        <!-- post method, to send the query to the api > get, part of url as queryparam > post, part of body (don't see it in url) -->
+<head>
+    <%- include("../partials/head");%>
+    <title>OBA Catalogus</title>
+</head>
 
-        <div class="detail-arrow-container1" id="detail-arrow-container">
-            <div class="arrow-talk-with-a-worker" id="arrows"></div>
-        </div>
+<body>
+    <%- include("../partials/nav");%>
+    <h1 class="oba-title">OBA Catalogus</h1>
+    <!-- post method, to send the query to the api > get, part of url as queryparam > post, part of body (don't see it in url) -->
 
-        <div class="detail-arrow-container2" id="detail-arrow-container">
-            <div class="arrow-favorites" id="arrows"></div>
-        </div>
+    <div class="detail-arrow-container1" id="detail-arrow-container">
+        <div class="arrow-talk-with-a-worker" id="arrows"></div>
+    </div>
 
-        <div class="message-wrapper">
-            <ul id="message-list"></ul>
-            <div class="stick1"></div>
-        </div>
+    <div class="detail-arrow-container2" id="detail-arrow-container">
+        <div class="arrow-favorites" id="arrows"></div>
+    </div>
 
-        <div class="digital-assistant-container">
-            <img
-                class="digital-assistant-detail"
-                src="/images/character/animation/frame3.png"
-                alt=""
-            />
-        </div>
+    <div class="message-wrapper">
+        <ul id="message-list"></ul>
+        <div class="stick1"></div>
+    </div>
 
-        <div class="detail-pagina">
-            <div class="detail-pagina_image">
-                <button
-                    class="secondary-button detail-pagina_back-button"
-                    onclick="history.back()"
-                >
-                    &lt; Terug
-                </button>
+    <div class="digital-assistant-container">
+        <img class="digital-assistant-detail" src="/images/character/animation/frame3.png" alt="" />
+    </div>
 
-                <div class="detail-pagina_img-and-buttons">
-                    <img
-                        class="detail-pagina_image_cover"
-                        src="<%= record.coverimages[1] %>"
-                    />
-                    <div class="detail-pagina_image_icons">
-                        <button>
-                            <div
-                                class="detail-arrow-container3"
-                                id="detail-arrow-container"
-                            >
-                                <div class="arrow-favorite" id="arrows"></div>
-                            </div>
-                            <span>Favoriet</span>
-                            <span
-                                ><img src="/images/icons/favorite.svg" alt=""
-                            /></span>
-                        </button>
+    <div class="detail-pagina">
+        <div class="detail-pagina_image">
+            <button class="secondary-button detail-pagina_back-button" onclick="history.back()">
+                &lt; Terug
+            </button>
 
-                        <button>
-                            <div
-                                class="detail-arrow-container4"
-                                id="detail-arrow-container"
-                            >
-                                <div class="arrow-share" id="arrows"></div>
-                            </div>
-                            <span>Delen</span>
-                            <span
-                                ><img src="/images/icons/share.svg" alt=""
-                            /></span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="detail-pagina_informatie">
-                <h2><%= record.titles[0] %></h2>
-
-                <% if (Array.isArray(record.summaries) &&
-                record.summaries.length > 0) { %>
-                <section>
-                    <h3 class="summary">Samenvatting</h3>
-                    <p><%= record.summaries[0] %></p>
-                </section>
-                <% } %> <% if (Array.isArray(record.genres) &&
-                record.genres.length > 0) { %>
-                <section>
-                    <h3>Thema</h3>
-                    <p><%= record.genres[0] %></p>
-                </section>
-                <% } %> <% if (Array.isArray(record.authors) &&
-                record.authors.length > 0) { %>
-                <section>
-                    <h3>Auteur</h3>
-                    <p><%= record.authors.join(', ') %></p>
-                </section>
-                <% } %> <% if (Array.isArray(record.publisher) &&
-                record.publisher.length > 0) { %>
-                <section>
-                    <h3>Uitgever</h3>
-                    <p><%= record.publisher[0] %></p>
-                </section>
-                <% } %> <% if (Array.isArray(record.languages) &&
-                record.languages.length > 0) { %>
-                <section>
-                    <h3>Taal</h3>
-                    <p><%= record.languages.join(', ') %></p>
-                </section>
-                <% } %> <% if (Array.isArray(record.formats) &&
-                record.formats.length > 0) { %>
-                <section>
-                    <h3>Formaat</h3>
-                    <p><%= record.formats.map((format) => format.text) %></p>
-                </section>
-                <% } %> <% if (Array.isArray(record.isbn) && record.isbn.length
-                > 0) { %>
-                <section>
-                    <h3>ISBN</h3>
-                    <p><%= record.isbn.toString().replace(/^=/, '') %></p>
-                </section>
-                <% } %>
-
-                <div class="detail-pagina_informatie_buttons">
-                    <a
-                        href="<%= record.detailLink %>"
-                        class="secondary-button hi"
-                        >OBA Website</a
-                    >
-                    <button class="primary-button" id="dialog-button">
-                        Waar ligt dit?
+            <div class="detail-pagina_img-and-buttons">
+                <img class="detail-pagina_image_cover" src="<%= record.coverimages[1] %>" />
+                <div class="detail-pagina_image_icons">
+                    <button>
+                        <div class="detail-arrow-container3" id="detail-arrow-container">
+                            <div class="arrow-favorite" id="arrows"></div>
+                        </div>
+                        <span>Favoriet</span>
+                        <span><img src="/images/icons/like.svg" alt="" /></span>
                     </button>
 
-                    <dialog id="modal">
-                        <img
-                            src="/images/dialog/locatie.png"
-                            alt="location text should be here"
-                        />
-                        <button class="primary-button" id="close-button">
-                            Sluiten
-                        </button>
-                    </dialog>
+                    <button>
+                        <div class="detail-arrow-container4" id="detail-arrow-container">
+                            <div class="arrow-share" id="arrows"></div>
+                        </div>
+                        <span>Delen</span>
+                        <span><img src="/images/icons/share.svg" alt="" /></span>
+                    </button>
                 </div>
             </div>
         </div>
-    </body>
+
+        <div class="detail-pagina_informatie">
+            <h2><%= record.titles[0] %></h2>
+
+            <% if (Array.isArray(record.summaries) &&
+                record.summaries.length > 0) { %>
+            <section>
+                <h3 class="summary">Samenvatting</h3>
+                <p><%= record.summaries[0] %></p>
+            </section>
+            <% } %> <% if (Array.isArray(record.genres) &&
+                record.genres.length > 0) { %>
+            <section>
+                <h3>Thema</h3>
+                <p><%= record.genres[0] %></p>
+            </section>
+            <% } %> <% if (Array.isArray(record.authors) &&
+                record.authors.length > 0) { %>
+            <section>
+                <h3>Auteur</h3>
+                <p><%= record.authors.join(', ') %></p>
+            </section>
+            <% } %> <% if (Array.isArray(record.publisher) &&
+                record.publisher.length > 0) { %>
+            <section>
+                <h3>Uitgever</h3>
+                <p><%= record.publisher[0] %></p>
+            </section>
+            <% } %> <% if (Array.isArray(record.languages) &&
+                record.languages.length > 0) { %>
+            <section>
+                <h3>Taal</h3>
+                <p><%= record.languages.join(', ') %></p>
+            </section>
+            <% } %> <% if (Array.isArray(record.formats) &&
+                record.formats.length > 0) { %>
+            <section>
+                <h3>Formaat</h3>
+                <p><%= record.formats.map((format) => format.text) %></p>
+            </section>
+            <% } %> <% if (Array.isArray(record.isbn) && record.isbn.length
+                > 0) { %>
+            <section>
+                <h3>ISBN</h3>
+                <p><%= record.isbn.toString().replace(/^=/, '') %></p>
+            </section>
+            <% } %>
+
+            <div class="detail-pagina_informatie_buttons">
+                <a href="<%= record.detailLink %>" class="secondary-button hi">OBA Website</a>
+                <button class="primary-button" id="dialog-button">
+                    Waar ligt dit?
+                </button>
+
+                <dialog id="modal">
+                    <img src="/images/dialog/locatie.png" alt="location text should be here" />
+                    <button class="primary-button" id="close-button">
+                        Sluiten
+                    </button>
+                </dialog>
+            </div>
+        </div>
+    </div>
+</body>
+
 </html>

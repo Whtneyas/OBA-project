@@ -55,3 +55,6 @@ exports.getDetails = async function (id) {
 
     return response.data.record;
 };
+
+
+
