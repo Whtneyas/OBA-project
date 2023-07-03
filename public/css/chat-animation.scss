@@ -3,11 +3,11 @@
     justify-content: center;
     align-items: center;
     color: #161616;
-    top: .3em;
-    position: relative;
-    height: 30px;
+    height: 10px;
     font-size: .8rem;
     position: relative;
+    bottom: 5em;
+    z-index: 10;
 
 
 
@@ -18,15 +18,18 @@
         position: absolute;
         /* Set the position to relative */
 
-        top: 2em;
+        top: 3em;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         background-color: white;
         border-radius: 2rem;
         box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-        height: 50px;
-        width: 80%;
+        height: 40px;
+        width: 70%;
+        right: 50%;
+        transform: translateX(50%);
+
 
 
     }
@@ -35,10 +38,11 @@
     .chat-paragraph {
         color: #3C389E;
         font-size: .8rem;
+        opacity: 0;
         font-weight: 500;
         padding: 1em;
         font-size: .8rem;
-        transition: opacity 0s ease-in-out;
+        transition: opacity 1s ease-in-out;
     
 
     }
