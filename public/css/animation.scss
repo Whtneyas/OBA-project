@@ -64,7 +64,7 @@
 
         }
 
-        &.fade-out {
+        .fade-out {
             animation: fadeOutAnimation 1s forwards;
             animation-delay: 2s;
             /* Delay the fade-out animation */

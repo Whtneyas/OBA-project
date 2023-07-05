@@ -7,6 +7,7 @@
 </head>
 
 <body>
+
     <%- include("../partials/nav");%>
     <h1 class="oba-title">OBA Catalogus</h1>
     <!-- post method, to send the query to the api > get, part of url as queryparam > post, part of body (don't see it in url) -->
@@ -37,15 +38,15 @@
             <div class="detail-pagina_img-and-buttons">
                 <img class="detail-pagina_image_cover" src="<%= record.coverimages[1] %>" />
                 <div class="detail-pagina_image_icons">
-                    <button>
+                    <button class="like-btn">
                         <div class="detail-arrow-container3" id="detail-arrow-container">
                             <div class="arrow-favorite" id="arrows"></div>
                         </div>
                         <span>Favoriet</span>
-                        <span><img src="/images/icons/like.svg" alt="" /></span>
+                        <span><img src="/images/icons/favorite.svg" alt="" /></span>
                     </button>
 
-                    <button>
+                    <button class="share-btn"  id="shareButton">
                         <div class="detail-arrow-container4" id="detail-arrow-container">
                             <div class="arrow-share" id="arrows"></div>
                         </div>
@@ -103,21 +104,12 @@
             </section>
             <% } %>
 
-            <div class="detail-pagina_informatie_buttons">
-                <a href="<%= record.detailLink %>" class="secondary-button hi">OBA Website</a>
-                <button class="primary-button" id="dialog-button">
-                    Waar ligt dit?
-                </button>
-
-                <dialog id="modal">
-                    <img src="/images/dialog/locatie.png" alt="location text should be here" />
-                    <button class="primary-button" id="close-button">
-                        Sluiten
-                    </button>
-                </dialog>
-            </div>
+          
         </div>
     </div>
 </body>
 
 </html>
+
+
+

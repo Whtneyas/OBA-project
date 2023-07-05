@@ -8,6 +8,9 @@ router
     .get(apiController.getExample)
     .post(apiController.postExample);
 
+router
+    .post('/favorite', apiController.addToFavorites);
+
 // .post(object.function-in-the-object)
 router.route('/search/').post(apiController.search);
 router.route('/details/').get(apiController.getDetails);

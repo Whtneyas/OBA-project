@@ -51,3 +51,22 @@ exports.getDetails = async function (req, res) {
     // Give back results
     return res.json(record);
 };
+
+
+
+exports.addToFavorites = async function (req, res) {
+  const id = req.body.id;
+
+  if (!id) {
+    return res.status(400).send('No ID provided');
+  }
+
+
+  favorites.push(id);
+
+  // Save the book ID to favorites or perform any other desired actions
+  // You can use a database or a file to store the favorite books
+
+  return res.sendStatus(200);
+};
+
