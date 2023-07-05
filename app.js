@@ -26,11 +26,7 @@ app.set('view engine', 'ejs');
 // MIDDLEWARE ROUTES
 app.use('/', frontendRoutes);
 app.use('/api', apiRoutes);
-// homepage
-// app.use('/', frontendRouter);
 
-// api
-// app.use('/api', apiRouter);
 
 app.listen(port, () => {
     console.log(`The server is running on port http://localhost:${port}/`);
