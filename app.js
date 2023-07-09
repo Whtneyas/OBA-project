@@ -2,6 +2,7 @@
 require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
+const session = require('express-session');
 
 const frontendRoutes = require('./routes/frontend');
 // different routers
@@ -12,11 +13,18 @@ const app = express();
 const port = process.env.PORT || 4400;
 
 // MIDDLEWARE
+app.use(session({
+  secret: 'your-secret-key',
+  resave: false,
+  saveUninitialized: false
+}));
+
 // for static files
 app.use(express.static('public'));
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
+
 // parse application/json
 app.use(bodyParser.json());
 
@@ -27,7 +35,6 @@ app.set('view engine', 'ejs');
 app.use('/', frontendRoutes);
 app.use('/api', apiRoutes);
 
-
 app.listen(port, () => {
-    console.log(`The server is running on port http://localhost:${port}/`);
+  console.log(`The server is running on port http://localhost:${port}/`);
 });
