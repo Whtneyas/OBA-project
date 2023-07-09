@@ -5,8 +5,11 @@ exports.index = function (req, res) {
 };
 
 exports.favorite = function (req, res) {
-    res.render('pages/favorite');
-};
+    const favoriteContent = req.session.favoriteContent || null;
+    res.render('pages/favorite', { favoriteContent });
+  };
+
+
 
 exports.details = async function (req, res) {
     const id = req.params.id;
@@ -22,20 +25,10 @@ exports.details = async function (req, res) {
 
     console.log('Rendering record', record);
 
-    res.render('pages/details', { record });
+    res.render('pages/details', {
+        record
+    });
 };
 
 
 
-exports.addToFavorites = async function (req, res) {
-    const id = req.body.id;
-  
-    if (!id) {
-      return res.status(400).send('No ID provided');
-    }
-  
-    // Save the book ID to favorites or perform any other desired actions
-    // You can use a database or a file to store the favorite books
-  
-    return res.sendStatus(200);
-  };

@@ -1,10 +1,14 @@
 const obaService = require('../services/oba');
 const openAiService = require('../services/openai');
 
+// const favorites = []; 
+
 // if you write something in line it shows up in http://localhost:4400/api/example
 // in frontend: fetch(/api/example)
 exports.getExample = function (req, res) {
-    res.json({ hello: 'idk' });
+    res.json({
+        hello: 'idk'
+    });
 };
 
 // send http to api with fetch
@@ -54,19 +58,13 @@ exports.getDetails = async function (req, res) {
 
 
 
-exports.addToFavorites = async function (req, res) {
-  const id = req.body.id;
+exports.addToFavorites = function (req, res) {
+  const favoriteContent = req.body.favoriteContent;
 
-  if (!id) {
-    return res.status(400).send('No ID provided');
+  if (!favoriteContent) {
+    return res.status(400).send('No favorite content provided');
   }
 
-
-  favorites.push(id);
-
-  // Save the book ID to favorites or perform any other desired actions
-  // You can use a database or a file to store the favorite books
-
-  return res.sendStatus(200);
+  req.session.favoriteContent = favoriteContent;
+  res.sendStatus(200);
 };
-
