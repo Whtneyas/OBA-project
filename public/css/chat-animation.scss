@@ -1,13 +1,13 @@
 .chat-icon {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-end;
+    align-items: flex-end;
     color: #161616;
     height: 10px;
     font-size: .8rem;
     position: relative;
     bottom: 5em;
-    z-index: 10;
+    z-index: 20;
 
 
 
@@ -16,21 +16,19 @@
     #paragraph-container {
         display: flex;
         position: absolute;
-        /* Set the position to relative */
 
         top: 3em;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        // background-color: white;
-        border-radius: 2rem;
-        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-        height: 40px;
-        width: 70%;
-        right: 50%;
-        transform: translateX(50%);
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding: 1em;
 
-
+        // border-radius: 2rem;
+        // box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        // height: 40px;
+        // width: 70%;
+        // right: 50%;
+        // transform: translateX(50%);
 
     }
 
@@ -43,27 +41,17 @@
         padding: 1em;
         font-size: .8rem;
         transition: opacity 1s ease-in-out;
+        background-color: white;
+        border-radius: 2rem;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        height: 40px;
+      
     
 
     }
 
     .stick {
-        // width: 20px;
-        // position: absolute;
-        // height: 18px;
-
-
-        // background-color: white;
-        // right: 5em;
-
-        // /* Position stick on the far right */
-        // transform: rotate(55deg);
-
-        // top: 1.5em;
-        // color: white;
-        // box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-        // z-index: -1;
-
+       
         display:none;
     }
 
@@ -71,13 +59,15 @@
 }
 
 
-@media (min-width:44em) {
+
+
+
+@media (min-width:70em) {
     
 
     .chat-icon {
-        z-index: 1;
+      
         position: relative;
-
 
 
         #paragraph-container {

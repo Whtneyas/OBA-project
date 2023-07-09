@@ -8,7 +8,7 @@
     justify-content: center;
     position: fixed;
     bottom: 76px;
-    z-index: 1;
+    // z-index: 1;
     height: 40px;
     background-color: #d9d9d926;
     padding: 0;
@@ -52,6 +52,7 @@
         }
     }
 }
+
 
 @media (min-width: 410px) {
 
