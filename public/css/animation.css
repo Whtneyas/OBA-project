@@ -91,7 +91,7 @@
   /* Delay the animation for the second arrow */
 }
 
-.arrow-container .double-arrow.fade-out {
+.arrow-container .double-arrow .fade-out {
   -webkit-animation: fadeOutAnimation 1s forwards;
           animation: fadeOutAnimation 1s forwards;
   -webkit-animation-delay: 2s;
