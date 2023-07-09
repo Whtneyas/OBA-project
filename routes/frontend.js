@@ -7,7 +7,7 @@ router.route('/').get(frontendController.index);
 // /details/someid
 router.route('/details/:id').get(frontendController.details);
 
-// favorite pages to /favorieten
-router.route('/favorieten').get(frontendController.favorite);
+//favorite pages to /favorieten
+router.route('/favorite').get(frontendController.favorite);
 
 module.exports = router;

@@ -1,29 +1,20 @@
 <!DOCTYPE html>
 <html lang="nl">
-
 <head>
     <%- include("../partials/head");%>
-    <title>OBA Catalogus</title>
+    <title>OBA Catalogus - Favorieten</title>
 </head>
-
 <body>
     <%- include("../partials/nav");%>
-    <h1 class="favorite-heading">Favorieten</h1>
-    <!-- post method, to send the query to the api > get, part of url as queryparam > post, part of body (don't see it in url) -->
-    <!-- favoritesPage.ejs -->
+    <h1 class="oba-title">Favorieten</h1>
 
-    <h1>Favorite Books</h1>
-    <% if (favorites.length === 0) { %>
-    <p>No favorite books yet.</p>
-    <% } else { %>
-    <ul>
-        <% favorites.forEach((book) => { %>
-        <li><%= book.title %></li>
-        <% }); %>
-    </ul>
-    <% } %>
-
-
+    <div class="favorites-container">
+        <% if (favoriteContent) { %>
+            <p><%= favoriteContent %></p>
+        <% } else { %>
+            <p>No favorite content found.</p>
+        <% } %>
+    </div>
+    
 </body>
-
 </html>

@@ -38,7 +38,7 @@
             <div class="detail-pagina_img-and-buttons">
                 <img class="detail-pagina_image_cover" src="<%= record.coverimages[1] %>" />
                 <div class="detail-pagina_image_icons">
-                    <button class="like-btn">
+                    <button id="likeButton" class="like-button">
                         <div class="detail-arrow-container3" id="detail-arrow-container">
                             <div class="arrow-favorite" id="arrows"></div>
                         </div>
@@ -46,7 +46,7 @@
                         <span><img src="/images/icons/favorite.svg" alt="" /></span>
                     </button>
 
-                    <button class="share-btn"  id="shareButton">
+                    <button class="share-btn" id="shareButton">
                         <div class="detail-arrow-container4" id="detail-arrow-container">
                             <div class="arrow-share" id="arrows"></div>
                         </div>
@@ -104,12 +104,21 @@
             </section>
             <% } %>
 
-          
+            <div class="detail-pagina_informatie_buttons">
+                <a href="<%= record.detailLink %>" class="secondary-button hi">OBA Website</a>
+                <button class="primary-button" id="dialog-button">
+                    Waar ligt dit?
+                </button>
+
+                <dialog id="modal">
+                    <img src="/images/dialog/locatie.png" alt="location text should be here" />
+                    <button class="primary-button" id="close-button">
+                        Sluiten
+                    </button>
+                </dialog>
+            </div>
         </div>
     </div>
 </body>
 
 </html>
-
-
-
