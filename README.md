@@ -78,3 +78,30 @@ Wij hebben als groep een design rationale gemaakt. Deze kan je vinden op de volg
  https://www.dropbox.com/scl/fi/9h787yko3atj6t267nhl1/Design-Rationale-_-OBA-Project.paper?dl=0&rlkey=jtvw7swgmgudjv76n0okkrj58
 
 
+ ## Herkansing 
+
+Feedback beoordeling/ checklist
+
+We hebben waardevolle feedback ontvangen om individueel aan een volgende iteratie te werken. Hieronder volgt een gedetailleerde lijst van de ontvangen feedbackpunten:
+
+- [X] Aantrekkelijke interface en zero state: Hoewel de interface een aantrekkelijk design heeft, functioneert de interactie niet overal even goed. We moeten ervoor zorgen dat de gebruikerservaring consistent en vloeiend is op alle interactiepunten.
+
+- [x] Formulier submit niet (geen form): Het indienen van het formulier werkt momenteel niet omdat er geen form-element is geïmplementeerd. We moeten ervoor zorgen dat de gebruiker de ingevulde gegevens succesvol kan verzenden.
+
+- [X] Links met meest gestelde vragen werken niet: De links naar de meest gestelde vragen leiden momenteel niet naar de juiste informatie. We moeten ervoor zorgen dat deze links correct functioneren en de gebruiker naar relevante informatie leiden.
+
+- [x] Leuke toepassing van de dialoog, alleen de esc-toets werkt niet? Hoewel de dialoogfunctionaliteit een leuke toevoeging is, is er momenteel een probleem met het gebruik van de 'esc'-toets om de dialoog te sluiten. Dit moet worden opgelost om een vlotte interactie te garanderen.
+
+- [x] Geen goede interface-oplossing voor het tonen van zoekresultaten zonder afbeeldingen: In situaties waarin er geen afbeeldingen beschikbaar zijn voor zoekresultaten, ontbreekt momenteel een geschikte interface-oplossing. We moeten een alternatieve weergave of indicatie implementeren om gebruikers te informeren wanneer er geen afbeeldingen beschikbaar zijn.
+
+- []x Veel bugs: Er zijn meerdere bugs en fouten ontdekt in de applicatie. We moeten grondig testen en alle geïdentificeerde bugs oplossen om de stabiliteit en functionaliteit te verbeteren.
+
+- [X] De chat is onnavolgbaar: De chatfunctionaliteit is momenteel verwarrend en moeilijk te volgen. We moeten de chatinterface verduidelijken en ervoor zorgen dat gebruikers de conversatie gemakkelijk kunnen begrijpen.
+
+- [x] Het werkt niet goed op verschillende schermformaten en de interface is slordig: De applicatie reageert niet goed op verschillende schermformaten en de algehele interface ziet er slordig uit. We moeten een responsieve lay-out implementeren en de interface optimaliseren voor een consistente en professionele uitstraling.
+
+- [ ] De algehele presentatie mist context en uitleg: De huidige presentatie van het project mist context en duidelijke uitleg. Het is belangrijk dat we de nodige documentatie toevoegen om de beoordelaars een goed inzicht te geven in de functionaliteit en doelstellingen van de applicatie.
+
+- [X] Maak een volgende versie die wel goed functioneert: Om aan de gestelde eisen te voldoen, moeten we individueel werken aan een volgende iteratie van de applicatie. Elk teamlid zal verantwoordelijk zijn voor het implementeren van verbeteringen op basis van de ontvangen feedback, zodat we een goed functionerende versie kunnen presenteren.
+
+
