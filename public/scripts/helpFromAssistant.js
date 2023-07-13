@@ -50,7 +50,7 @@ export function helpFromAssistant() {
             'Dit zijn je zoek resultaten.',
             'Als je op een van deze klikt, vind je meer informatie.',
             'Heb je een medewerker nodig?',
-            'Druk dan op de vraagteken knop.',
+            'Praat met een medewerker',
         ];
 
         var index = 0;
