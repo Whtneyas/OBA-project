@@ -1,14 +1,12 @@
 .chat-icon {
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+    justify-content: center;
+    align-items: center;
     color: #161616;
     height: 10px;
     font-size: .8rem;
     position: relative;
-    bottom: 5em;
-    z-index: 20;
-
+    bottom: 7em;
 
 
 
@@ -16,43 +14,34 @@
     #paragraph-container {
         display: flex;
         position: absolute;
-
-        top: 3em;
+        top: 5em;
         flex-direction: column;
         justify-content: flex-end;
         align-items: flex-end;
         padding: 1em;
 
-        // border-radius: 2rem;
-        // box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-        // height: 40px;
-        // width: 70%;
-        // right: 50%;
-        // transform: translateX(50%);
-
     }
 
-
     .chat-paragraph {
-        color: #3C389E;
+        color:white;
         font-size: .8rem;
         opacity: 0;
         font-weight: 500;
         padding: 1em;
         font-size: .8rem;
         transition: opacity 1s ease-in-out;
-        background-color: white;
+        background-color: #3C389E;
         border-radius: 2rem;
         box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
         height: 40px;
-      
-    
+
+
 
     }
 
     .stick {
-       
-        display:none;
+
+        display: none;
     }
 
 
@@ -62,42 +51,27 @@
 
 
 
-@media (min-width:70em) {
-    
+@media (min-width:75em) {
+
 
     .chat-icon {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        bottom: 5em;
       
-        position: relative;
 
 
         #paragraph-container {
-            border-radius: .3em;
-            position: absolute;
-            display: flex;
-            justify-content: flex-start;
-            align-items: left;
-            right: 45em;
-            transform: translateX(-50%) translateY(-480%);
-            height: 80px;
-            width: 18%;
-        }
 
-        .chat-paragraph {
-            font-size: 1rem;
-            padding: 1.3em;
+            .chat-paragraph {
+                font-size: 1rem;
+            }
 
         }
-
-        .stick {
-            right: 55em;
-            height: 30px;
-            transform: translateY(-305px) rotate(-65deg);
-            border-radius: .3em;
-
-
-        }
-
-
 
     }
+
+
 }

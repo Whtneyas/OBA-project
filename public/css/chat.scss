@@ -7,7 +7,7 @@
     display: flex;
     justify-content: center;
     position: fixed;
-    bottom: 76px;
+    bottom: 70px;
     // z-index: 1;
     height: 40px;
     background-color: #d9d9d926;
@@ -56,6 +56,7 @@
 
 @media (min-width: 410px) {
 
+
     .chat_bar_input,
     .chat_bar_button {
         font-size: 1rem;
@@ -73,6 +74,7 @@
 // desktop
 @media (min-width: 1000px) {
     .chat {
-        bottom: 0px;
+        bottom: 15px;
+        
     }
 }

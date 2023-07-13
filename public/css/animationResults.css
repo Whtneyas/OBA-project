@@ -2,52 +2,61 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  color: #161616;
+  height: 5em;
+  font-size: .8rem;
+  min-width: 80vw;
+  left: 2em;
+  height: 20%;
+  gap: 2em;
   position: fixed;
-  top: 1em;
-  margin-left: 2em;
-  z-index: 999;
-  gap: 0.5em;
-  left: -1.2em;
+  bottom: 10em;
+  z-index: 20;
 }
 
 #results-container #results-message {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: white;
+  background-color: #3c389e;
   border-radius: 3em;
-  right: -10px;
   padding: 5px;
-  min-width: 70vw;
+  min-width: 50vw;
   height: 40px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
           box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 #results-container #results-message .message-text {
-  color: #3c389e;
+  color: white;
   font-size: 0.8rem;
   text-align: center;
 }
 
 #results-container #results-message .message-text2 {
-  color: #3c389e;
+  color: white;
   font-size: 0.8rem;
   text-align: center;
 }
 
 #results-container #results-message .message-texts {
-  color: #3c389e;
+  color: white;
   font-size: 0.8rem;
   text-align: center;
 }
@@ -60,12 +69,12 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 0.3em;
   position: relative;
 }
@@ -98,7 +107,6 @@
 #results-container .button-container #yesButton {
   background-color: var(--primary-button-bg);
   color: var(--primary-button-text);
-  margin-left: auto;
 }
 
 #results-container .button-container #yesButton:hover {
@@ -106,7 +114,7 @@
   color: var(--button-hover-text);
 }
 
-@media (min-width: 44em) {
+@media (min-width: 75em) {
   #results-container #results-message {
     border-radius: 0.3em;
     height: 80px;
@@ -154,14 +162,22 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    min-width: -webkit-fit-content;
+    min-width: -moz-fit-content;
+    min-width: fit-content;
     position: fixed;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    width: 100%;
-    padding-right: 60px;
-    bottom: 40px;
-    right: 5px;
+    right: 60px;
+    max-width: 200px;
+    min-height: 50vh;
   }
 }
 /*# sourceMappingURL=animationResults.css.map */

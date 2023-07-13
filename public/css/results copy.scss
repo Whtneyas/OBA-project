@@ -1,0 +1,108 @@
+// check main.js client-side for elements
+// mobile
+// results of what is being searched for/fetched
+#parent_results {
+    // z-index: -999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 270px;
+
+    #results {
+
+        background-color: var(--background);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-bottom: 200px;
+
+        .no-results-message {
+            color: grey;
+            font-size: 14px;
+            text-align: center;
+            margin-top: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            padding: 1em;
+
+
+        }
+
+
+
+        // h2 heading with format type such as book
+        .format-heading {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+            margin-left: 2em;
+
+        }
+
+        // container with the book and title
+        .results-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            // gap: 20px 20px;
+
+            .prentenboek {
+                background-color: green;
+            }
+
+            // the container of the whole book
+            a {
+                text-decoration: none;
+
+                // img of a result
+                img {
+                    width: 100px;
+                    height: 140px;
+                    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+                        rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+                }
+
+                .detail-div {
+                    margin-bottom: 20px;
+
+                    // title of book
+                    h3 {
+                        color: #3c389e;
+                        word-wrap: break-word;
+                        width: 128px;
+                        font-size: 0.8em;
+                    }
+
+                    // author
+                    p {
+                        color: grey;
+                        word-wrap: break-word;
+                        width: 128px;
+                        font-size: 0.7em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+// desktop
+@media (min-width: 44em) {
+    #parent_container {
+        position: relative;
+
+        #results {
+            // so it's below the robot bar
+            position: absolute;
+            bottom: -10em;
+            margin-left: 5em;
+            margin-right: 5em;
+        }
+    }
+}

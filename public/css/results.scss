@@ -1,35 +1,71 @@
-// check main.js client-side for elements
-// mobile
 // results of what is being searched for/fetched
+
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
 #parent_results {
-    // z-index: -999;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 270px;
+    position: relative;
+    width: 100%;
+   
+    
+  
+  
+
+
 
     #results {
-
         background-color: var(--background);
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding-bottom: 200px;
+        // height: 100%;
+      
+      
+
+       .image-container{
+
+        .no-image-message{
+            color: grey;
+          
+            
+        }
+
+       }
+
 
         .no-results-message {
             color: grey;
-            font-size: 14px;
+            font-size: 1.3reM;
             text-align: center;
-            margin-top: 100px;
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 100%;
+            min-height: 100vh;
+            min-width: 100vw;
+            position: fixed;
+            right: 0;
+            top: -2em;
             padding: 1em;
+            background-color: var(--background);
 
-
+          
+           
         }
-
 
 
         // h2 heading with format type such as book
@@ -47,13 +83,14 @@
             justify-content: center;
             // gap: 20px 20px;
 
-            .prentenboek {
-                background-color: green;
-            }
 
             // the container of the whole book
             a {
                 text-decoration: none;
+
+                &:hover {
+                    animation: bounce 1s infinite;
+                }
 
                 // img of a result
                 img {
@@ -91,18 +128,48 @@
 
 
 
-
 // desktop
-@media (min-width: 44em) {
-    #parent_container {
-        position: relative;
+@media (min-width:80em) {
+    #parent_results {
+       bottom: 2em;
+        min-width: 100vw;
 
         #results {
             // so it's below the robot bar
             position: absolute;
-            bottom: -10em;
-            margin-left: 5em;
-            margin-right: 5em;
+            // max-width: 80vw;
+            padding-left: 2em;
+          
+            .no-results-message {
+                color: grey;
+                font-size: 2rem;
+                justify-content: center;
+                margin: 0;
+            }
+
+
+            .results-container {
+                gap: 1em;
+                position: relative;
+                top: 40em;
+                background-color: var(--background);
+                // min-width: 100vw;
+                min-height:70vh;
+                // margin:0 2em;
+                min-width: 80vw;
+
+
+
+                a {
+                    img {
+                        width: 140px;
+                        height: 180px;
+                    }
+                }
+
+            }
+
+
         }
     }
 }

@@ -16,7 +16,7 @@
   position: absolute;
   padding: 1em;
   list-style: none;
-  background-color: white;
+  background-color: #3C389E;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -29,14 +29,14 @@
           align-items: center;
   border-radius: 2em;
   height: 40px;
-  width: 90%;
+  width: 50%;
   margin: 1em;
   -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
           box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 .message-wrapper #message-list .message {
-  color: #3C389E;
+  color: white;
   white-space: nowrap;
   font-size: .8rem;
 }
@@ -45,8 +45,9 @@
   width: 20px;
   position: absolute;
   height: 18px;
-  background-color: white;
+  background-color: #3C389E;
   right: 5em;
+  display: none;
   /* Position stick on the far right */
   -webkit-transform: rotate(55deg);
           transform: rotate(55deg);
@@ -61,14 +62,17 @@
   display: none;
 }
 
-@media (min-width: 44em) {
+@media (min-width: 60em) {
   .message-wrapper {
+    position: -webkit-sticky;
+    position: sticky;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-    -webkit-box-align: right;
-        -ms-flex-align: right;
-            align-items: right;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    top: 5em;
   }
   .message-wrapper #message-list {
     top: 14em;
@@ -104,12 +108,13 @@
         -ms-flex-pack: end;
             justify-content: flex-end;
     opacity: 1;
+    bottom: 15em;
   }
   .digital-assistant-container .digital-assistant-detail {
     position: absolute;
     width: 250px;
-    top: 25em;
-    right: 2em;
+    top: 24em;
+    right: 1em;
   }
 }
 /*# sourceMappingURL=detailAnimation.css.map */

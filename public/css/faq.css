@@ -10,7 +10,7 @@
           align-items: center;
   margin: 0 3em auto;
   position: relative;
-  top: 5em;
+  bottom: 5em;
   padding: .5em;
 }
 
@@ -24,7 +24,7 @@
 }
 
 .faq-wrapper .heading-faq h4 {
-  color: #3C389E;
+  color: white;
   font-weight: 700;
 }
 
@@ -58,9 +58,9 @@
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  border-bottom: 0.5px solid #cecece;
   padding: .5em;
   color: black;
+  font-size: 1rem;
 }
 
 .faq-wrapper .faq-list li::before {
@@ -101,5 +101,26 @@
 .faq-wrapper .faq-list li p {
   margin-top: 5px;
   color: black;
+  line-height: 1.5em;
+  font-size: .8rem;
+  padding: 1em;
+  border-top: 1px solid grey;
+}
+
+@media (min-width: 44em) {
+  .faq-wrapper {
+    bottom: 10em;
+  }
+  .faq-wrapper .heading-faq {
+    padding: 1em;
+  }
+  .faq-wrapper .heading-faq #cancelBtn {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .faq-wrapper .faq-list {
+    width: 50%;
+    font-size: 1rem;
+  }
 }
 /*# sourceMappingURL=faq.css.map */

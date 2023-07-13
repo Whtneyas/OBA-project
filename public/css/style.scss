@@ -40,6 +40,7 @@ html {
     background-color: var(--background);
 }
 
+
 button {
     cursor: pointer;
 }
@@ -65,15 +66,68 @@ button {
     top: 20px;
 
     img {
-        max-width: 400px;
+        max-width: 300px;
         margin-bottom: 10px;
     }
-    &::backdrop {
-        background-color: #bfbfbf63;
-        backdrop-filter: blur(5px);
-    }
+
 }
 
 .hidden {
     display: none !important;
+}
+
+.intro-image {
+    display: flex;
+    justify-content: center;
+    gap: 3em;
+    align-items: center;
+    flex-direction: column;
+   
+
+}
+
+h5 {
+    color: #242174;
+    font-size: 1.5rem;
+
+}
+
+
+@media (min-width: 44em) {
+
+
+    .intro-image {
+        gap: 3em;
+      
+
+        img {
+            width: 400px;
+          
+          
+        }
+    }
+
+    h5 {
+       
+        font-size: 3.5rem;
+        font-weight: 700;
+     
+      
+       
+
+    }
+
+
+    #modal {
+
+        img {
+            max-width: 400px;
+            margin-bottom: 10px;
+        }
+
+
+
+
+
+    }
 }

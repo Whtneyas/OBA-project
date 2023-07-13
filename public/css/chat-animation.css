@@ -2,18 +2,17 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #161616;
   height: 10px;
   font-size: .8rem;
   position: relative;
-  bottom: 5em;
-  z-index: 20;
+  bottom: 7em;
 }
 
 .chat-icon #paragraph-container {
@@ -21,7 +20,7 @@
   display: -ms-flexbox;
   display: flex;
   position: absolute;
-  top: 3em;
+  top: 5em;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -36,7 +35,7 @@
 }
 
 .chat-icon .chat-paragraph {
-  color: #3C389E;
+  color: white;
   font-size: .8rem;
   opacity: 0;
   font-weight: 500;
@@ -44,7 +43,7 @@
   font-size: .8rem;
   -webkit-transition: opacity 1s ease-in-out;
   transition: opacity 1s ease-in-out;
-  background-color: white;
+  background-color: #3C389E;
   border-radius: 2rem;
   -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
           box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
@@ -55,38 +54,21 @@
   display: none;
 }
 
-@media (min-width: 70em) {
+@media (min-width: 75em) {
   .chat-icon {
-    position: relative;
-  }
-  .chat-icon #paragraph-container {
-    border-radius: .3em;
-    position: absolute;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: left;
-        -ms-flex-align: left;
-            align-items: left;
-    right: 45em;
-    -webkit-transform: translateX(-50%) translateY(-480%);
-            transform: translateX(-50%) translateY(-480%);
-    height: 80px;
-    width: 18%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    bottom: 5em;
   }
-  .chat-icon .chat-paragraph {
+  .chat-icon #paragraph-container .chat-paragraph {
     font-size: 1rem;
-    padding: 1.3em;
-  }
-  .chat-icon .stick {
-    right: 55em;
-    height: 30px;
-    -webkit-transform: translateY(-305px) rotate(-65deg);
-            transform: translateY(-305px) rotate(-65deg);
-    border-radius: .3em;
   }
 }
 /*# sourceMappingURL=chat-animation.css.map */
