@@ -59,6 +59,7 @@
   position: relative;
   top: 12em;
   opacity: 0;
+  background-color: red;
 }
 
 .arrow-container .double-arrow {
